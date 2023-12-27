@@ -95,7 +95,7 @@ export default function SectionLetsConnect() {
     <section
       ref={ref}
       className={`safe-x-padding ${styles.sectionDistance} overflow-y-hidden lg:h-[1000px]`}
-      aria-label="Let's Connect Section"
+      aria-label="Let&apos;s Connect Section"
     >
       <div className="text-center">
         <motion.h2
@@ -115,7 +115,7 @@ export default function SectionLetsConnect() {
           {/* Do you have any questions or a project in mind? Let&apos;s connect! I
           am here to help and excited to hear from you. You can also take a look
           at my work. */}
-          So come along and join me on my journey of discovery and exploration. Let's build some amazing things together! 🌱👨‍💻💫
+          So come along and join me on my journey of discovery and exploration. Let&apos;s build some amazing things together! 🌱👨‍💻💫
         </motion.p>
       </div>
       <div className="h-full mt-4">

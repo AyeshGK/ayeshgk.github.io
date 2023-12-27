@@ -79,7 +79,7 @@ export default function SectionTechnologyStack() {
                 About Me
                     </motion.h2>
                 <motion.p initial={{ y: 100, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ duration: 0.7 }} className={`${styles.sectionDescription} max-w-[960px] mx-auto`}>
-                I'm Ayesh Vininda, 🌟 a curious student currently pursuing studies in the department of Computer 
+                I&apos;m Ayesh Vininda, 🌟 a curious student currently pursuing studies in the department of Computer 
                 Science & Engineering at the esteemed University of Moratuwa.
                  💡 I am a passionate Web Application Developer and AI 
                 Enthusiast with a strong background in deep learning.
