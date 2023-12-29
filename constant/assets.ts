@@ -18,6 +18,8 @@ export const assets = {
       gmail: require("@images/home/letsConnect/gmail.webp"),
       instagram: require("@images/home/letsConnect/instagram.webp"),
       linkedin: require("@images/home/letsConnect/linkedin.webp"),
+      medium: require("@images/home/letsConnect/medium.webp"),
+      twitter: require("@images/home/letsConnect/twitter.webp"),
     },
     myLatestProject: {
       figma: require("@images/home/myLatestProject/figma.webp"),

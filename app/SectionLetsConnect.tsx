@@ -15,7 +15,17 @@ export default function SectionLetsConnect() {
     triggerOnce: true,
   });
 
-  const socialMediaLinks = [
+  const socialMediaLinks = {
+    linkedin: "https://linkedin.com/in/ayesh-vininda-1998gk",
+    instagram: "https://instagram.com/ayesh_vininda",
+    github: "https://github.com/ayeshgk",
+    dribble: "https://dribbble.com/ayesh-vininda",
+    gmail: "mailto:ayeshgk@gmail.com",
+    medium: "https://medium.com/@ayeshgk",
+    twitter: "https://twitter.com/AyeshVininda",
+  }
+
+  const socialMedia = [
     {
       initial: { y: 50, opacity: 0 },
       animate: inView ? { y: 0, opacity: 1 } : {},
@@ -29,8 +39,7 @@ export default function SectionLetsConnect() {
       height: 168,
       tabIndex: 0,
       onClick: () =>
-        window.open("www.linkedin.com/in/ayesh-vininda-1998gk"
-        , "_blank"),
+        window.open(socialMediaLinks.linkedin, "_blank"),
     },
     {
       initial: { y: 50, opacity: 0 },
@@ -39,12 +48,12 @@ export default function SectionLetsConnect() {
       whileHover: { scale: 1.1, transition: { duration: 0.2 } },
       className:
         "hidden lg:block absolute hover:cursor-pointer top-14 right-14 xl:right-24 w-10 h-10 md:w-[168px] md:h-[168px] z-10",
-      src: assets.home.letsConnect.instagram,
+      src: assets.home.letsConnect.twitter,
       alt: "",
       width: 168,
       height: 168,
       tabIndex: 0,
-      onClick: () => window.open("https://instagram.com/ayesh_vininda", "_blank"),
+      onClick: () => window.open(socialMediaLinks.twitter, "_blank"),
     },
     {
       initial: { y: -50, opacity: 0 },
@@ -58,7 +67,7 @@ export default function SectionLetsConnect() {
       width: 168,
       height: 168,
       tabIndex: 0,
-      onClick: () => window.open("https://github.com/ayeshgk", "_blank"),
+      onClick: () => window.open(socialMediaLinks.github, "_blank"),
     },
     {
       initial: { y: -50, opacity: 0 },
@@ -67,13 +76,13 @@ export default function SectionLetsConnect() {
       whileHover: { scale: 1.1, transition: { duration: 0.2 } },
       className:
         "hidden lg:block absolute hover:cursor-pointer bottom-14 left-36 xl:left-44 md:left-24 w-10 h-10 md:w-[168px] md:h-[168px] z-10",
-      src: assets.home.letsConnect.dribble,
+      src: assets.home.letsConnect.medium,
       alt: "",
       width: 168,
       height: 168,
       tabIndex: 0,
       onClick: () =>
-        window.open("https://dribbble.com/ayesh-vininda", "_blank"),
+        window.open(socialMediaLinks.medium, "_blank"),
     },
     {
       initial: { y: 100, opacity: 0 },
@@ -87,7 +96,7 @@ export default function SectionLetsConnect() {
       width: 310,
       height: 310,
       tabIndex: 0,
-      onClick: () => window.open("mailto:ayeshgk@gmail.com", "_self"),
+      onClick: () => window.open(socialMediaLinks.gmail, "_self"),
     },
   ];
 
@@ -112,21 +121,12 @@ export default function SectionLetsConnect() {
           transition={{ duration: 0.7 }}
           className={`${styles.sectionDescription} max-w-[730px] mx-auto`}
         >
-          {/* Do you have any questions or a project in mind? Let&apos;s connect! I
-          am here to help and excited to hear from you. You can also take a look
-          at my work. */}
           So come along and join me on my journey of discovery and exploration. Let&apos;s build some amazing things together! 🌱👨‍💻💫
         </motion.p>
       </div>
       <div className="h-full mt-4">
         <div className="relative flex flex-col items-center justify-center">
           <div className="hidden lg:block absolute animate-ping -z-[2]">
-            {/* <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={inView ? { scale: 1, opacity: 1 } : {}}
-              transition={{ duration: 0.5, delay: 1 }}
-              className="rounded-full gradient-bg h-96 w-96"
-            ></motion.div> */}
           </div>
           <AnimatedImage
             initial={{ y: 50, opacity: 0 }}
@@ -139,7 +139,7 @@ export default function SectionLetsConnect() {
             height={530}
             priority
           />
-          {socialMediaLinks.map((socialMediaLink, index) => (
+          {socialMedia.map((socialMediaLink, index) => (
             <AnimatedImage key={index.toString()} {...socialMediaLink} />
           ))}
           <div className="flex flex-row flex-wrap items-center justify-center gap-3 mt-4 lg:hidden">
@@ -154,7 +154,7 @@ export default function SectionLetsConnect() {
               height={100}
               tabIndex={0}
               onClick={() =>
-                window.open("https://linkedin.com/in/ayesh-vininda", "_blank")
+                window.open(socialMediaLinks.linkedin, "_blank")
               }
             />
             <AnimatedImage
@@ -162,13 +162,13 @@ export default function SectionLetsConnect() {
               animate={inView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.8 }}
               className="z-[1] hover:cursor-pointer w-[100px] h-[100px]"
-              src={assets.home.letsConnect.dribble}
+              src={assets.home.letsConnect.twitter}
               alt=""
               width={100}
               height={100}
               tabIndex={0}
               onClick={() =>
-                window.open("https://dribbble.com/ayesh-vininda", "_blank")
+                window.open(socialMediaLinks.twitter, "_blank")
               }
             />
             <AnimatedImage
@@ -182,7 +182,7 @@ export default function SectionLetsConnect() {
               height={100}
               tabIndex={0}
               onClick={() =>
-                window.open("mailto:ayesh.netuchi@gmail.com", "_self")
+                window.open(socialMediaLinks.gmail, "_self")
               }
             />
             <AnimatedImage
@@ -190,13 +190,13 @@ export default function SectionLetsConnect() {
               animate={inView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.6 }}
               className="z-[1] hover:cursor-pointer w-[100px] h-[100px]"
-              src={assets.home.letsConnect.instagram}
+              src={assets.home.letsConnect.medium}
               alt=""
               width={100}
               height={100}
               tabIndex={0}
               onClick={() =>
-                window.open("https://instagram.com/ayesh561", "_blank")
+                window.open(socialMediaLinks.medium, "_blank")
               }
             />
             <AnimatedImage
@@ -210,7 +210,7 @@ export default function SectionLetsConnect() {
               height={100}
               tabIndex={0}
               onClick={() =>
-                window.open("https://github.com/ayesh-vininda", "_blank")
+                window.open(socialMediaLinks.github, "_blank")
               }
             />
           </div>
