@@ -87,7 +87,7 @@ export default function SectionHero(): JSX.Element {
             className="font-montserrat font-extrabold text-5xl md:text-[64px] md:leading-[56px] lg:text-[66px] lg:leading-[88px] gradient-text mb-6 text-center xl:text-left"
             aria-label="Web Developer | AI Enthusiast"
           >
-            Web Developer AI Enthusiast
+            Web Developer
           </motion.h2>
           <motion.h2
             className="font-montserrat font-extrabold text-5xl md:text-[64px] md:leading-[56px] lg:text-[66px] lg:leading-[88px] gradient-text mb-6 text-center xl:text-left"
