@@ -6,8 +6,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { BsDribbble, BsGithub } from "react-icons/bs";
-import { IoMdOpen } from "react-icons/io";
 import { useInView } from "react-intersection-observer";
 
 const categories = [
@@ -37,23 +35,27 @@ const blogTypes = [
 ]
 
 const initialBlogs = [
-    // {
-    //     slug: 'lseg-flower-exchange',
-    //     title: 'LSEG Flower Exchange',
-    //     image: assets.home.myLatestProject.projects.flowerExchange,
-    //     repositoryUrl: "https://github.com/AyeshGK/lseg_flower_exchange",
-    //     link: "",
-    //     summary: 'Flower Exchange Project developed for London Stock Exchange Group (LSEG) which  designed to streamline the flower exchange process using C++. Project aimed to facilitate transactions between buyers and sellers.',
-    //     keywords: [
-    //         {
-    //             name: 'C++',
-    //             imageUrl: 'https://img.icons8.com/?size=512&id=40669&format=png',
-    //             webUrl: 'https://www.cplusplus.com/'
-    //         },
-    //     ],
-    //     blogType: blogTypes[4],
-    //     category: categories[1]
-    // },
+    {
+        slug: 'finetuining',
+        title: 'Finetuning 🧐',
+        image: assets.home.blogs.blog5,
+        repositoryUrl: "",
+        link: "https://medium.com/@ayeshgk/finetuning-155807d4840a",
+        summary: "Finetuning is taking a pre-trained model and further training it on a more specific dataset or task.",
+        keywords: [
+            {
+                name: 'LLMs',
+            },
+            {
+                name:'Finetuining',
+            },
+            {
+                name:'Prompting',
+            },
+        ],
+        blogType: blogTypes[1],
+        category: categories[0]
+    },
     {
         slug: 'beyound-forward-and-reverse-proxies',
         title: 'Beyound Forward and Reverse Proxies',

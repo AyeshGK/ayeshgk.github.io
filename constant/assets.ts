@@ -72,6 +72,7 @@ export const assets = {
       blog2: require("@images/blogs/_02/1.png"),
       blog3: require("@images/blogs/_03/1.png"),
       blog4: require("@images/blogs/_04/1.png"),
+      blog5: require("@images/blogs/_05/1.png"),
       
       
     }
