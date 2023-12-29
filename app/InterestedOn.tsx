@@ -8,7 +8,7 @@ import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
 import styles from "./home.module.css";
 
-const technologyStack = [
+const interestSet = [
     {
         name: 'Machine Learning',
         image: assets.home.interests.ml,
@@ -41,27 +41,27 @@ const technologyStack = [
     },
     // {
     //     name: "Javascript",
-    //     image: assets.home.technologyStack.javascript,
+    //     image: assets.home.interestSet.javascript,
     //     officialSite: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
     // },
     // {
     //     name: "React JS",
-    //     image: assets.home.technologyStack.reactJs,
+    //     image: assets.home.interestSet.reactJs,
     //     officialSite: 'https://reactjs.org/',
     // },
     // {
     //     name: "Tailwind CSS",
-    //     image: assets.home.technologyStack.tailwindCss,
+    //     image: assets.home.interestSet.tailwindCss,
     //     officialSite: 'https://tailwindcss.com/',
     // },
     // {
     //     name: "React Native",
-    //     image: assets.home.technologyStack.reactNative,
+    //     image: assets.home.interestSet.reactNative,
     //     officialSite: 'https://reactnative.dev/',
     // },
     // {
     //     name: "Typescript",
-    //     image: assets.home.technologyStack.typescript,
+    //     image: assets.home.interestSet.typescript,
     //     officialSite: 'https://www.typescriptlang.org/',
     // }
 ]
@@ -85,7 +85,7 @@ export default function SectionTechnologyStack() {
             </div>
             <div className='flex items-center justify-center mt-12'>
                 <div className='flex flex-row gap-[50px] max-w-[864px] flex-wrap justify-center items-center'>
-                    {technologyStack.map((item, index) => (
+                    {interestSet.map((item, index) => (
                         <div key={index.toString()} className='relative h-full'>
                             <motion.div
                                 className="flex justify-center items-center w-[100px] h-[100px] transition-all duration-150 ease-in-out"
@@ -102,7 +102,7 @@ export default function SectionTechnologyStack() {
                                     height={100}
                                     alt={item.name}
                                 />
-                                <Link
+                                {/* <Link
                                     href={{
                                         pathname: item.officialSite,
                                         query: {
@@ -113,13 +113,13 @@ export default function SectionTechnologyStack() {
                                     }}
                                     target="_blank"
                                     title={`Figure out about ${item.name}`}
-                                >
+                                > */}
                                     <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full p-1 text-white transition-all duration-300 bg-opacity-50 opacity-0 gradient-bg hover:opacity-100 rounded-xl">
                                         <p className='font-semibold text-center line-clamp-3'>
                                             {item.name}
                                         </p>
                                     </div>
-                                </Link>
+                                {/* </Link> */}
                             </motion.div>
                         </div>
                     ))}
