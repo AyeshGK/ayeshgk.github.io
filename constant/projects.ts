@@ -43,44 +43,89 @@ const initialProjects = [
         slug: 'lseg-flower-exchange',
         title: 'LSEG Flower Exchange',
         image: assets.home.myLatestProject.projects.flowerExchange,
+        images:[
+            {
+                src: assets.home.myLatestProject.projects.flowerExchange,
+                alt: 'LSEG Flower Exchange',
+            }
+        ],
         repositoryUrl: "https://github.com/AyeshGK/lseg_flower_exchange",
         demoUrl: "",
         summary: 'Flower Exchange Project developed for London Stock Exchange Group (LSEG) which  designed to streamline the flower exchange process using C++. Project aimed to facilitate transactions between buyers and sellers.',
+        descriptions:[
+            {
+                description : 'Flower Exchange Project developed for London Stock Exchange Group (LSEG) which  designed to streamline the flower exchange process using C++. Project aimed to facilitate transactions between buyers and sellers.'
+            },
+        ],
         techStacks: [
             {
                 name: 'C++',
                 imageUrl: 'https://img.icons8.com/?size=512&id=40669&format=png',
-                webUrl: 'https://www.cplusplus.com/'
+                webUrl: 'https://www.cplusplus.com/',
+                use : "Base Language"
             },
         ],
+        contributors: [
+            {
+                name: 'Ayesh Vininda',
+                email: 'ayeshgk@gmail.com'
+            },
+            {
+                name: 'Prasad Darshana',
+                email: 'Prasaddarshana1999@gmail.com'
+            }
+        ],
         projectType: projectTypes[4],
-        category: categories[1]
+        category: categories[0]
     },
-    // World Happiness Report
     {
         slug: 'world-happiness-report',
         title: 'World Happiness Report',
         image: assets.home.myLatestProject.projects.happinessReport,
+        images:[
+            {
+                src: assets.projects.happiness[1],
+                alt: 'World Happiness Report',
+            }
+        ],
         repositoryUrl: "",
         demoUrl: "https://datalore.jetbrains.com/report/static/WMusuL1p8wFKqLJUPl9qDa/YKq9ycK2HNR06gP1ggm6JV",
         summary: "The World Happiness Report is a comprehensive and ongoing initiative aimed at understanding and measuring the global well-being and happiness of people . Conducted annually, this project assesses and ranks countries based on various factors contributing to happiness, including GDP per capita, social support, life expectancy, freedom, generosity, and corruption.Through rigorous data analysis and in-depth research, the World Happiness Report provides valuable insights into the evolving trends and determinants of happiness worldwide. Policymakers, governments, and organizations use these findings to identify areas for improvement, implement positive changes, and enhance the overall quality of life for their citizens.",
+        descriptions:[
+            {
+                description :"The World Happiness Report is a comprehensive and ongoing initiative aimed at understanding and measuring the global well-being and happiness of people . Conducted annually, this project assesses and ranks countries based on various factors contributing to happiness, including GDP per capita, social support, life expectancy, freedom, generosity, and corruption.\nThrough rigorous data analysis and in-depth research, the World Happiness Report provides valuable insights into the evolving trends and determinants of happiness worldwide. Policymakers, governments, and organizations use these findings to identify areas for improvement, implement positive changes, and enhance the overall quality of life for their citizens."
+            }
+        ],
         techStacks: [
             {
                 name: 'Datalore-Jetbrains',
                 imageUrl: 'https://img.icons8.com/?size=512&id=FrYBY9mulFTb&format=png',
-                webUrl: 'https://datalore.jetbrains.com/'
+                webUrl: 'https://datalore.jetbrains.com/',
+                use: "Data Analytical Tool"
             },
             {
                 name: 'Plotly',
                 imageUrl: 'https://img.icons8.com/?size=512&id=80255&format=png',
                 // https://icons8.com/icon/80255/bar-chart
-                webUrl: 'https://plotly.com/'
+                webUrl: 'https://plotly.com/',
+                use: "Data Visualization library"
             },
             {
                 name:'Python',
                 imageUrl:'https://img.icons8.com/?size=512&id=l75OEUJkPAk4&format=png',
-                webUrl:'https://www.python.org/'
+                webUrl:'https://www.python.org/',
+                use: "Programming Language"
             },
+        ],
+        contributors: [
+            {
+                name: 'Ayesh Vininda',
+                email: 'ayeshgk@gmail.com'
+            },
+            {
+                name: 'Prasad Darshana',
+                email: 'Prasaddarshana1999@gmail.com'
+            }
         ],
         projectType: projectTypes[2],
         category: categories[0]
@@ -89,9 +134,32 @@ const initialProjects = [
         slug: 'parkinson-disease-detection-system',
         title: 'Parkinson Disease Detection System',
         image: assets.home.myLatestProject.projects.parkinsonDisease,
+        images:[
+            {
+                src: assets.projects.pdds[1],
+                alt: 'Parkinson Disease Detection System',
+            },
+            {
+                src: assets.projects.pdds[2],
+                alt: 'Parkinson Disease Detection System',
+            },
+            {
+                src: assets.projects.pdds[3],
+                alt: 'Parkinson Disease Detection System',
+            }
+        ],
         repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
         demoUrl: "",
         summary: "In the 4th semester Software Engineering module project, we developed a Parkinson’s Disease Detection System, utilizing machine learning for diagnosing Parkinson's disease, managing patient reports, and facilitating recovery tracking. The system encompasses three user roles – doctor, examiner, and admin – enabling examiners to register patients, conduct tests (spiral and wave), and generate reports, while doctors can access and review completed test records for registered patients.",
+        descriptions:[
+            {
+                description :"For the 4th semester Software Engineering module project we developed a Parkinson’s Disease Detection System which is a machine learning based testing system proposed to diagnose Parkinson's disease among the community, manage reports and recovery progress of the patients suffering from the disease. The system consists of 3 user types as doctor, examiner and the admin user. Examiners can register and perform tests for patients and generate test reports. A doctor can view the test records of a registered patient having completed his/her testing. In the system, a patient is subjected to two types of tests as spiral and wave. For each test, a hand drawn scanned image is required as input which then sends through the machine learning model and generate the result mentioning whether the patient is having the disease or not. "
+             },
+            {
+                topic: "My Contribution",
+                description:"In this comprehensive health diagnostic system, we employ Flask, a lightweight web framework, to develop a RESTful API that integrates two machine learning models for discerning health conditions from hand-drawn spiral and wave images. The backend is powered by a MySQL database implemented through the Prisma ORM, ensuring efficient data management. Simultaneously, a Node.js application, leveraging the Express framework, handles user authentication and authorization while orchestrating disease detection for patients and providing access to their medical reports. The integration of React on the frontend, connected to the Node.js backend via Axios, facilitates a seamless and responsive user interface. To make this powerful system accessible to a wider audience, we deploy three servers on Heroku, ensuring scalability, reliability, and accessibility for users seeking accurate health assessments based on their hand-drawn imagery."
+            }
+        ],
         techStacks: [
             {
                 name: 'React JS',
@@ -114,6 +182,32 @@ const initialProjects = [
                 webUrl:'https://www.mongodb.com/'
             }
         ],
+        constributors: [
+            {
+                name: 'Ayesh Vininda',
+                email: 'ayeshgk@gmail.com'
+            },
+            {
+                name: 'Nipun Pramuditha',
+                email: ''
+            },
+            {
+                name: 'Thushalya Weerasuriya',
+                email: ''
+            },
+            {
+                name:'Deshan Lakshitha',
+                email:''
+            },
+            {
+                name:'Thinira Wanasinghe',
+                email:''
+            },
+            {
+                name:'VINOJITH .G',
+                email:''
+            }
+        ],
         projectType: projectTypes[2],
         category: categories[0]
     },
@@ -121,30 +215,64 @@ const initialProjects = [
         slug: 'customer-churn-dashboard',
         title: 'Customer Churn Dashboard',
         image: assets.home.myLatestProject.projects.customerChurn,
+        images:[
+            {
+                src: assets.projects.churn[1],
+                alt: 'Customer Churn Dashboard',
+            },
+            {
+                src: assets.projects.churn[2],
+                alt: 'Customer Churn Dashboard',
+            },
+            {
+                src: assets.projects.churn[3],
+                alt: 'Customer Churn Dashboard',
+            },
+        ],
         repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
         demoUrl: "",
         summary: 'This dashboard helps to identify valuable insights for making decisions to company managers',
+        descriptions:[
+            {
+                topic:"",
+                description:'This dashboard helps to identify valuable insights for making decisions to company managers'
+            },
+            {
+                topic:"My Contribution",
+                description:"I have developed this dashboard using React JS and PowerBI. React JS is used for frontend and PowerBI is used for data visualization and analytical purposes. I have used Firebase as the database for mange decisions."
+            }
+        ],
         techStacks: [
             {
                 name: 'React JS',
                 imageUrl: 'https://img.icons8.com/?size=512&id=123603&format=png',
-                webUrl: 'https://reactjs.org/'
+                webUrl: 'https://reactjs.org/',
+                use : "Frontend"
             },
             {
                 name:'PowerBI',
                 imageUrl:'https://img.icons8.com/?size=512&id=qYfwpsRXEcpc&format=png',
-                webUrl:'https://powerbi.microsoft.com/en-us/'
+                webUrl:'https://powerbi.microsoft.com/en-us/',
+                use : "Data Visualization & Analytical Tool"
             },
             {
                 name:'Firebase',
                 imageUrl:'https://img.icons8.com/?size=512&id=62452&format=png',
-                webUrl:'https://www.mongodb.com/'
+                webUrl:'https://firebase.google.com/',
+                use : "Database"
             },
             {
                 name:'Flask',
                 imageUrl:'https://img.icons8.com/?size=512&id=MHcMYTljfKOr&format=png',
-                webUrl:'https://flask.palletsprojects.com/en/2.0.x/'
+                webUrl:'https://flask.palletsprojects.com/en/2.0.x/',
+                
             }
+        ],
+        contributors: [
+            {
+                name: 'Ayesh Vininda',
+                email: 'ayeshgk@gmail.com'
+            },
         ],
         projectType: projectTypes[2],
         category: categories[0]
@@ -153,24 +281,96 @@ const initialProjects = [
         slug: 'bank-transactions-and-loan-processing-system',
         title: 'Bank Transactions and Loan Processing System',
         image: assets.home.myLatestProject.projects.bank,
+        images:[
+            {
+                src: assets.projects.bank[1],
+                alt: 'Bank Transactions and Loan Processing System',
+            },
+            {
+                src: assets.projects.bank[2],
+                alt: 'Bank Transactions and Loan Processing System',
+            },
+            {
+                src: assets.projects.bank[3],
+                alt: 'Bank Transactions and Loan Processing System',
+            },
+            {
+                src: assets.projects.bank[4],
+                alt: 'Bank Transactions and Loan Processing System',
+            },
+            {
+                src: assets.projects.bank[5],
+                alt: 'Bank Transactions and Loan Processing System',
+            },
+            {
+                src: assets.projects.bank[6],
+                alt: 'Bank Transactions and Loan Processing System',
+            },
+            {
+                src: assets.projects.bank[7],
+                alt: 'Bank Transactions and Loan Processing System',
+            },
+            {
+                src: assets.projects.bank[8],
+                alt: 'Bank Transactions and Loan Processing System',
+            },
+            {
+                src: assets.projects.bank[9],
+                alt: 'Bank Transactions and Loan Processing System',
+            },
+        ],
         repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
         demoUrl: "",
         summary: "For the 4th semester Database Systems module we developed Bank Transaction and Loan Processing web Application which can be accessed all branches their customers and employees. This is database project which consists on advanced SQL queries for optimized data selections, events for automation, triggers for data manipulation, indexing for fast data access and transactions .",  
+        descriptions:[
+            {
+                description:"For the 4th semester Database Systems module we developed Bank Transaction and Loan Processing web Application which can be accessed all branches their customers and employees. This is database project which consists on advanced SQL queries for optimized data selections, events for automation, triggers for data manipulation, indexing for fast data access and transactions ."
+            },
+            {
+                topic:"Functionalities",
+                description:"Functionalities Customer and employee regulation with different user type levels. Bank accounts and Fixed Deposits administrations. Various types of transactions between accounts. Loan management and processing. Email system for banking services."
+            }
+        ],
+        contributors: [
+            {
+                name: 'Ayesh Vininda',
+                email: 'ayeshgk@gmail.com',
+            },
+            {
+                name: 'Prasad Darshana',
+                email: ''
+            },
+            {
+                name: 'Dasun Nimantha',
+                email: ''
+            },
+            {
+                name:'Dinuka Nimantha',
+                email:''
+            },
+            {
+                name:'Pamudu Palinda',
+                email:''
+            }
+        ],
         techStacks: [
             {
                 name: 'EJS',
                 imageUrl: 'https://img.icons8.com/?size=512&id=Pxe6MGswB8pX&format=png',
-                webUrl: 'https://ejs.co/'
+                webUrl: 'https://ejs.co/',
+                use : "Frontend"
             },
             {
                 name: 'MySQL',
                 imageUrl: 'https://img.icons8.com/?size=512&id=UFXRpPFebwa2&format=png',
-                webUrl: 'https://www.mysql.com/'
+                webUrl: 'https://www.mysql.com/',
+                use : "Database"
             },
             {
                 name: 'Node JS',
                 imageUrl: 'https://img.icons8.com/?size=512&id=hsPbhkOH4FMe&format=png',
-                webUrl: 'https://nodejs.org/en/'
+                webUrl: 'https://nodejs.org/en/',
+                use : "Backend"
             },
         ],
         projectType: projectTypes[2],
@@ -180,37 +380,98 @@ const initialProjects = [
         slug: 'clinical-trial-management-system',
         title: 'Clinical Trial Management System',
         image: assets.home.myLatestProject.projects.clinicalTrial,
+        images:[
+            {
+                src: assets.projects.clinic[1],
+                alt: 'Clinical Trial Management System',
+            },
+            {
+                src: assets.projects.clinic[2],
+                alt: 'Clinical Trial Management System',
+            },
+            {
+                src: assets.projects.clinic[3],
+                alt: 'Clinical Trial Management System',
+            },
+            {
+                src: assets.projects.clinic[4],
+                alt: 'Clinical Trial Management System',
+            },
+            {
+                src: assets.projects.clinic[5],
+                alt: 'Clinical Trial Management System',
+            },
+        ],
+        contributors: [
+            {
+                name: 'Ayesh Vininda',
+                email: 'ayeshgk@gmail.com',
+            },
+            {
+                name: 'Prasad Darshana',
+                email: ''
+            },
+            {
+                name: 'Dasun Nimantha',
+                email: ''
+            },
+            {
+                name:'Dinuka Nimantha',
+                email:''
+            }
+        ],
         repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
         demoUrl: "",
         summary: 'For the Object-Oriented Software Development module, we developed a website for Clinical Trial Management.This is a Web application built using PHP, MySQL with MVC for backend and HTML, CSS, Bootstrap for Frontend.',
+        descriptions:[
+            {
+                description:"For the Object-Oriented Software Development module, we developed a website for Clinical Trial Management.This is a Web application built using PHP, MySQL with MVC for backend and HTML, CSS, Bootstrap for Frontend."
+            },
+            {
+                topic:"Functionalities",
+                description:"A company can add/edit/delete clinical trials.A client can apply and participate in clinical trials.Developed a web application for pharmaceutical companies to manage clinical trials.Provides a common platform for both companies and clients to meet."
+            }
+        ],
         techStacks: [
             {
                 name: 'Bootstrap',
                 imageUrl: 'https://img.icons8.com/?size=512&id=PndQWK6M1Hjo&format=png',
-                webUrl: 'https://getbootstrap.com/'
+                webUrl: 'https://getbootstrap.com/',
+                use : "Styling"
             },
             {
                 name: 'MySQL',
                 imageUrl: 'https://img.icons8.com/?size=512&id=UFXRpPFebwa2&format=png',
-                webUrl: 'https://www.mysql.com/'
+                webUrl: 'https://www.mysql.com/',
+                use : "Database"
             },
             {
                 name: 'PHP',
                 imageUrl: 'https://img.icons8.com/?size=512&id=anECpXcEIboQ&format=png',
-                webUrl: 'https://www.php.net/'
+                webUrl: 'https://www.php.net/',
+                use : "Backend"
             },
         ],
         projectType: projectTypes[2],
         category: categories[0]
     },
-    
     {
         slug: 'web-application-for-vehicle-rentle-service',
         title: 'Web application for vehicle rentle service',
         image: assets.home.myLatestProject.projects.carRental,
+        images:[
+            {
+                src: assets.projects.rental[1],
+                alt: 'Web application for vehicle rentle service',
+            }],
         repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
         demoUrl: "",
         summary: 'Contributed to the development of web application for a vehicle rental service, with frontend responsibilities using React.',
+        descriptions:[
+            {
+                description:"Contributed to the development of web application for a vehicle rental service, with frontend responsibilities using React."
+            }
+        ],
         techStacks: [
             {
                 name: 'Tailwind CSS',
@@ -240,9 +501,24 @@ const initialProjects = [
         slug: 'audirea-music-generator',
         title: 'Audirea - Music generator',
         image: assets.home.myLatestProject.projects.audirea,
+        images:[
+            {
+                src: assets.projects.audira[1],
+                alt: 'Audirea - Music generator',
+            }
+        ],
         repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
         demoUrl: "",
         summary: 'Developed a music-generator, utilizing deep learning techniques with LSTM  in TensorFlow.',
+        descriptions:[
+            {
+                description:"Developed a music-generator, utilizing deep learning techniques with LSTM  in TensorFlow."
+            }
+        ],
+        contributors: [{
+            name: 'Ayesh Vininda',
+            email: 'ayeshgk@gmail.com'
+        }],
         techStacks: [
             {
                 name:'Python',
@@ -260,4 +536,8 @@ const initialProjects = [
     },
 ]
 
-export {initialProjects}
+function getProjectBySlug(slug: string) {
+    return initialProjects.find(project => project.slug === slug);
+}
+
+export {initialProjects,getProjectBySlug}

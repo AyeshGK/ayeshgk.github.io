@@ -34,19 +34,19 @@ export default function Project() {
                         <div key={index} className="col-span-4 shadow-md hover:shadow-2xl hover:scale-[1.01] rounded-2xl transition-all duration-500 ease-in-out">
                             <Link
                                 className="w-full h-full bg-white"
-                                href={`/project/${project.slug}`}
+                                href={`/project/${project?.slug}`}
                                 target="_blank"
                             >
                                 <div className="relative overflow-hidden max-h-48 rounded-tl-2xl rounded-tr-2xl">
                                     <div className="relative">
-                                        <Image className="object-cover" src={project.image} alt={`${project.title} thumbnail`} />
+                                        <Image className="object-cover" src={project?.images[0]?.src} alt={`${project.title} thumbnail`} />
                                         <div className="absolute top-0 right-0 p-2 bg-black z-[1] text-white rounded-bl-2xl text-sm hover:opacity-0 transition-all duration-500 ease-in-out">
-                                            {project.projectType.name}
+                                            {project?.projectType?.name}
                                         </div>
                                     </div>
                                     <div className="absolute bottom-0 left-0 px-6 py-3">
                                         <div className="flex flex-row flex-wrap gap-x-4">
-                                            {project.techStacks.map((techStack, index) => (
+                                            {project?.techStacks?.map((techStack, index) => (
                                                 <motion.div
                                                     key={index}
                                                     initial={{ opacity: 0 }}
@@ -55,12 +55,12 @@ export default function Project() {
                                                     className="p-1 bg-white border-[0.5px] border-gray/70 rounded-full hover:cursor-help"
                                                 >
                                                     <Image
-                                                        src={techStack.imageUrl}
+                                                        src={techStack?.imageUrl}
                                                         alt={`${techStack.name} icon`}
                                                         loader={({ src }) => src}
                                                         width={36}
                                                         height={36}
-                                                        title={techStack.name}
+                                                        title={techStack?.name}
                                                         unoptimized
                                                     />
                                                 </motion.div>
@@ -70,7 +70,7 @@ export default function Project() {
                                 </div>
                                 <div className="p-6 py-4">
                                     <h5 className="mb-2 text-base font-bold line-clamp-1">{project.title}</h5>
-                                    <p className="text-sm font-normal line-clamp-2">{project.summary}</p>
+                                    <p className="text-sm font-normal line-clamp-2">{project?.descriptions[0]?.description}</p>
                                     <div className="grid grid-flow-col gap-4 mt-4">
                                         {project.demoUrl && (
                                             <button

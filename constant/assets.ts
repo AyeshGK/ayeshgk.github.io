@@ -75,8 +75,79 @@ export const assets = {
       blog3: require("@images/blogs/_03/1.png"),
       blog4: require("@images/blogs/_04/1.png"),
       blog5: require("@images/blogs/_05/1.png"),
-      
-      
-    }
+    },
   },
-};
+  projects:{
+    pdds:{
+      1: require("@images/projects/_01/1.png"),
+      2: require("@images/projects/_01/2.png"),
+      3: require("@images/projects/_01/3.png"),
+      4: require("@images/projects/_01/4.png"),
+      5: require("@images/projects/_01/5.png"),
+      6: require("@images/projects/_01/6.png"),
+      7: require("@images/projects/_01/7.png"),
+      8: require("@images/projects/_01/8.png"),
+      9: require("@images/projects/_01/9.png"),
+    },
+
+    churn:{
+      1: require("@images/projects/_02/1.png"),
+      2: require("@images/projects/_02/2.png"),
+      3: require("@images/projects/_02/3.png"),
+      4: require("@images/projects/_02/4.png"),
+      5: require("@images/projects/_02/5.png"),
+      6: require("@images/projects/_02/6.png"),
+      7: require("@images/projects/_02/7.png"),
+      8: require("@images/projects/_02/8.png"),
+    },
+
+    bank:{
+      1: require("@images/projects/_03/1.png"),
+      2: require("@images/projects/_03/2.png"),
+      3: require("@images/projects/_03/3.png"),
+      4: require("@images/projects/_03/4.png"),
+      5: require("@images/projects/_03/5.png"),
+      6: require("@images/projects/_03/6.png"),
+      7: require("@images/projects/_03/7.png"),
+      8: require("@images/projects/_03/8.png"),
+      9: require("@images/projects/_03/9.png"),
+    },
+
+    clinic:{
+      1: require("@images/projects/_04/1.png"),
+      2: require("@images/projects/_04/2.png"),
+      3: require("@images/projects/_04/3.png"),
+      4: require("@images/projects/_04/4.png"),
+      5: require("@images/projects/_04/5.png"),
+    },
+
+    rental:{
+      1: require("@images/projects/_05/1.png"),
+    },
+
+    audira :{
+      1: require("@images/projects/_06/1.png"),
+    },
+
+    flower:{
+      1: require("@images/projects/_07/1.png"),
+    },
+
+    happiness:{
+      1: require("@images/projects/_08/1.png"),
+    },
+
+    got:{
+      1: require("@images/projects/_09/1.png"),
+      2: require("@images/projects/_09/2.png"),
+      3: require("@images/projects/_09/3.png"),
+      4: require("@images/projects/_09/4.png"),
+
+    },
+
+  }
+}
+
+
+
+// Path: constant/links.ts
