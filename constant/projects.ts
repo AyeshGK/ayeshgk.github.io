@@ -12,7 +12,7 @@ const categories = [
     },
     {
         slug: 'service',
-        name: 'Service',
+        name: 'Web Service',
     }
 ];
 
@@ -244,7 +244,7 @@ const initialProjects = [
                 email: 'ayeshgk@gmail.com'
             },
         ],
-        projectType: projectTypes[0],
+        projectType: projectTypes[5],
         category: categories[2]
     },
     {
@@ -330,7 +330,31 @@ const initialProjects = [
             {
                 src: assets.projects.pdds[3],
                 alt: 'Parkinson Disease Detection System',
-            }
+            },
+            {
+                src: assets.projects.pdds[4],
+                alt: 'Parkinson Disease Detection System',
+            },
+            {
+                src: assets.projects.pdds[5],
+                alt: 'Parkinson Disease Detection System',
+            },
+            {
+                src: assets.projects.pdds[6],
+                alt: 'Parkinson Disease Detection System',
+            },
+            {
+                src: assets.projects.pdds[7],
+                alt: 'Parkinson Disease Detection System',
+            },
+            {
+                src: assets.projects.pdds[8],
+                alt: 'Parkinson Disease Detection System',
+            },
+            {
+                src: assets.projects.pdds[9],
+                alt: 'Parkinson Disease Detection System',
+            },
         ],
         repositoryUrl: "https://github.com/team-hexagon-6",
         demoUrl: "",
@@ -420,6 +444,26 @@ const initialProjects = [
                 src: assets.projects.churn[3],
                 alt: 'Customer Churn Dashboard',
             },
+            {
+                src: assets.projects.churn[4],
+                alt: 'Customer Churn Dashboard',
+            },
+            {
+                src: assets.projects.churn[5],
+                alt: 'Customer Churn Dashboard',
+            },
+            {
+                src: assets.projects.churn[6],
+                alt: 'Customer Churn Dashboard',
+            },
+            {
+                src: assets.projects.churn[7],
+                alt: 'Customer Churn Dashboard',
+            },
+            {
+                src: assets.projects.churn[8],
+                alt: 'Customer Churn Dashboard',
+            },
         ],
         repositoryUrl: "https://github.com/ayeshgk-machine-learning/data-science-project",
         demoUrl: "",
@@ -456,8 +500,7 @@ const initialProjects = [
                 name:'Flask',
                 imageUrl:'https://img.icons8.com/?size=512&id=MHcMYTljfKOr&format=png',
                 webUrl:'https://flask.palletsprojects.com/en/2.0.x/',
-                use : "Backend"
-                
+                use : "Backend - ML Model"
             }
         ],
         contributors: [

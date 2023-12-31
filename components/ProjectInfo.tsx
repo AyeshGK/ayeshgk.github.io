@@ -9,7 +9,7 @@ import { useInView } from "react-intersection-observer";
 import { Project } from "./ProjectInterface";
 
 export default function ProjectInfo ({project}:{project:Project}) {
-   const { title, images, repositoryUrl, demoUrl, descriptions, contributors, techStacks } = project;
+   const { title, images, repositoryUrl, demoUrl, descriptions, contributors, techStacks,projectType,category } = project;
 
     const { ref, inView } = useInView({
         threshold: 0.1,
@@ -57,15 +57,25 @@ export default function ProjectInfo ({project}:{project:Project}) {
             <div>
                 {descriptions?.length >0 &&
                     <motion.div initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ duration: 0.4 }} className='mt-[50px]'>
-                        <h3 className='mb-4 text-2xl font-bold font-montserrat'>Project Description</h3>
+                        <h3 className='mb-4 text-2xl font-bold font-montserrat'>Project Description 
+                            <span 
+                                className="mx-4 px-4 py-2 text-sm font-bold text-white rounded-md gradient-bg cursor-pointer"
+                            >
+                            {projectType?.name}
+                            </span>
+                        </h3>
+                        
+                        
+                        
                         { descriptions.map(({topic , description},index) => (<>
-                            {topic && <h4 className='mb-4 text-xl font-bold font-montserrat'>{topic}</h4>}
+                            {topic && <h4 className='my-2 mb-4 text-xl font-bold font-montserrat'>{topic}</h4>}
                             <p className='text-base font-medium text-black/70'>
                                 {description}
                             </p>
                         </>))}
                     </motion.div>
                 }
+
 
                 <div className='flex flex-wrap gap-6'>
                     {contributors?.length > 0 && (
