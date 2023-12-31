@@ -6,22 +6,10 @@ import Image from "next/image";
 import { BsDribbble, BsGithub ,BsGear,BsPerson} from "react-icons/bs";
 import { IoMdOpen } from "react-icons/io";
 import { useInView } from "react-intersection-observer";
+import { Project } from "./ProjectInterface";
 
-export default function ProjectInfo({project}) {
-    const { 
-        slug, 
-        category,
-        projectType,
-        techStacks,contributors,
-        title,
-        image,
-        summary,
-        descriptions,
-        repositoryUrl,
-        demoUrl,
-        images
-
-    } = project;
+export default function ProjectInfo ({project}:{project:Project}) {
+   const { title, images, repositoryUrl, demoUrl, descriptions, contributors, techStacks } = project;
 
     const { ref, inView } = useInView({
         threshold: 0.1,

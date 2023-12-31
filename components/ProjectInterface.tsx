@@ -8,4 +8,5 @@ export interface Project {
     contributors?: undefined;
     projectType: { slug: string; name: string };
     category: { slug: string; name: string }; // Update the type of category
+    techStacks: { slug: string; name: string }[];
 }
