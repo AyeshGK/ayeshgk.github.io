@@ -1,4 +1,5 @@
 import { assets } from "./assets";
+import { Project } from "@/components/ProjectInterface";
 
 const categories = [
     {
@@ -42,7 +43,6 @@ const initialProjects = [
     {
         slug: 'lseg-flower-exchange',
         title: 'LSEG Flower Exchange',
-        image: assets.home.myLatestProject.projects.flowerExchange,
         images:[
             {
                 src: assets.home.myLatestProject.projects.flowerExchange,
@@ -51,7 +51,6 @@ const initialProjects = [
         ],
         repositoryUrl: "https://github.com/AyeshGK/lseg_flower_exchange",
         demoUrl: "",
-        summary: 'Flower Exchange Project developed for London Stock Exchange Group (LSEG) which  designed to streamline the flower exchange process using C++. Project aimed to facilitate transactions between buyers and sellers.',
         descriptions:[
             {
                 description : 'Flower Exchange Project developed for London Stock Exchange Group (LSEG) which  designed to streamline the flower exchange process using C++. Project aimed to facilitate transactions between buyers and sellers.'
@@ -81,7 +80,6 @@ const initialProjects = [
     {
         slug: 'world-happiness-report',
         title: 'World Happiness Report',
-        image: assets.home.myLatestProject.projects.happinessReport,
         images:[
             {
                 src: assets.projects.happiness[1],
@@ -90,7 +88,6 @@ const initialProjects = [
         ],
         repositoryUrl: "",
         demoUrl: "https://datalore.jetbrains.com/report/static/WMusuL1p8wFKqLJUPl9qDa/YKq9ycK2HNR06gP1ggm6JV",
-        summary: "The World Happiness Report is a comprehensive and ongoing initiative aimed at understanding and measuring the global well-being and happiness of people . Conducted annually, this project assesses and ranks countries based on various factors contributing to happiness, including GDP per capita, social support, life expectancy, freedom, generosity, and corruption.Through rigorous data analysis and in-depth research, the World Happiness Report provides valuable insights into the evolving trends and determinants of happiness worldwide. Policymakers, governments, and organizations use these findings to identify areas for improvement, implement positive changes, and enhance the overall quality of life for their citizens.",
         descriptions:[
             {
                 description :"The World Happiness Report is a comprehensive and ongoing initiative aimed at understanding and measuring the global well-being and happiness of people . Conducted annually, this project assesses and ranks countries based on various factors contributing to happiness, including GDP per capita, social support, life expectancy, freedom, generosity, and corruption.\nThrough rigorous data analysis and in-depth research, the World Happiness Report provides valuable insights into the evolving trends and determinants of happiness worldwide. Policymakers, governments, and organizations use these findings to identify areas for improvement, implement positive changes, and enhance the overall quality of life for their citizens."
@@ -133,7 +130,6 @@ const initialProjects = [
     {
         slug: 'parkinson-disease-detection-system',
         title: 'Parkinson Disease Detection System',
-        image: assets.home.myLatestProject.projects.parkinsonDisease,
         images:[
             {
                 src: assets.projects.pdds[1],
@@ -150,7 +146,6 @@ const initialProjects = [
         ],
         repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
         demoUrl: "",
-        summary: "In the 4th semester Software Engineering module project, we developed a Parkinson’s Disease Detection System, utilizing machine learning for diagnosing Parkinson's disease, managing patient reports, and facilitating recovery tracking. The system encompasses three user roles – doctor, examiner, and admin – enabling examiners to register patients, conduct tests (spiral and wave), and generate reports, while doctors can access and review completed test records for registered patients.",
         descriptions:[
             {
                 description :"For the 4th semester Software Engineering module project we developed a Parkinson’s Disease Detection System which is a machine learning based testing system proposed to diagnose Parkinson's disease among the community, manage reports and recovery progress of the patients suffering from the disease. The system consists of 3 user types as doctor, examiner and the admin user. Examiners can register and perform tests for patients and generate test reports. A doctor can view the test records of a registered patient having completed his/her testing. In the system, a patient is subjected to two types of tests as spiral and wave. For each test, a hand drawn scanned image is required as input which then sends through the machine learning model and generate the result mentioning whether the patient is having the disease or not. "
@@ -214,7 +209,6 @@ const initialProjects = [
     {
         slug: 'customer-churn-dashboard',
         title: 'Customer Churn Dashboard',
-        image: assets.home.myLatestProject.projects.customerChurn,
         images:[
             {
                 src: assets.projects.churn[1],
@@ -231,7 +225,6 @@ const initialProjects = [
         ],
         repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
         demoUrl: "",
-        summary: 'This dashboard helps to identify valuable insights for making decisions to company managers',
         descriptions:[
             {
                 topic:"",
@@ -280,7 +273,6 @@ const initialProjects = [
     {
         slug: 'bank-transactions-and-loan-processing-system',
         title: 'Bank Transactions and Loan Processing System',
-        image: assets.home.myLatestProject.projects.bank,
         images:[
             {
                 src: assets.projects.bank[1],
@@ -321,7 +313,6 @@ const initialProjects = [
         ],
         repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
         demoUrl: "",
-        summary: "For the 4th semester Database Systems module we developed Bank Transaction and Loan Processing web Application which can be accessed all branches their customers and employees. This is database project which consists on advanced SQL queries for optimized data selections, events for automation, triggers for data manipulation, indexing for fast data access and transactions .",  
         descriptions:[
             {
                 description:"For the 4th semester Database Systems module we developed Bank Transaction and Loan Processing web Application which can be accessed all branches their customers and employees. This is database project which consists on advanced SQL queries for optimized data selections, events for automation, triggers for data manipulation, indexing for fast data access and transactions ."
@@ -379,7 +370,6 @@ const initialProjects = [
     {
         slug: 'clinical-trial-management-system',
         title: 'Clinical Trial Management System',
-        image: assets.home.myLatestProject.projects.clinicalTrial,
         images:[
             {
                 src: assets.projects.clinic[1],
@@ -422,7 +412,6 @@ const initialProjects = [
         ],
         repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
         demoUrl: "",
-        summary: 'For the Object-Oriented Software Development module, we developed a website for Clinical Trial Management.This is a Web application built using PHP, MySQL with MVC for backend and HTML, CSS, Bootstrap for Frontend.',
         descriptions:[
             {
                 description:"For the Object-Oriented Software Development module, we developed a website for Clinical Trial Management.This is a Web application built using PHP, MySQL with MVC for backend and HTML, CSS, Bootstrap for Frontend."
@@ -458,7 +447,6 @@ const initialProjects = [
     {
         slug: 'web-application-for-vehicle-rentle-service',
         title: 'Web application for vehicle rentle service',
-        image: assets.home.myLatestProject.projects.carRental,
         images:[
             {
                 src: assets.projects.rental[1],
@@ -466,7 +454,6 @@ const initialProjects = [
             }],
         repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
         demoUrl: "",
-        summary: 'Contributed to the development of web application for a vehicle rental service, with frontend responsibilities using React.',
         descriptions:[
             {
                 description:"Contributed to the development of web application for a vehicle rental service, with frontend responsibilities using React."
@@ -500,7 +487,6 @@ const initialProjects = [
     {
         slug: 'audirea-music-generator',
         title: 'Audirea - Music generator',
-        image: assets.home.myLatestProject.projects.audirea,
         images:[
             {
                 src: assets.projects.audira[1],
@@ -509,7 +495,6 @@ const initialProjects = [
         ],
         repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
         demoUrl: "",
-        summary: 'Developed a music-generator, utilizing deep learning techniques with LSTM  in TensorFlow.',
         descriptions:[
             {
                 description:"Developed a music-generator, utilizing deep learning techniques with LSTM  in TensorFlow."
@@ -536,8 +521,14 @@ const initialProjects = [
     },
 ]
 
-function getProjectBySlug(slug: string) {
-    return initialProjects.find(project => project.slug === slug);
-}
+// function getProjectBySlug(slug: string) {
+//     const foundProject = initialProjects.find((project) => project.slug === slug);
+//     return foundProject || null; // Provide a default value when the project is not found
+//   }
+// fix above with the return type Project
+function getProjectBySlug(slug: string): Project | null {
+    const foundProject = initialProjects.find((project) => project.slug === slug);
+    return foundProject || null; // Provide a default value when the project is not found
+} 
 
 export {initialProjects,getProjectBySlug}

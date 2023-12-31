@@ -4,16 +4,23 @@ import { use, useState ,useEffect} from "react";
 
 import { getProjectBySlug } from "@/constant/projects";
 import ProjectInfo from "@/components/ProjectInfo";
+import { Project } from "@/components/ProjectInterface";
 
 const projectSlug = 'lseg-flower-exchange';
 
 export default function Project() {
-    const [project, setProject] = useState({});
+    // const [project, setProject] = useState({});
+    const [project, setProject] = useState<Project | undefined>(undefined);
+
 
 
     useEffect(() => {
-        const getProject = getProjectBySlug(projectSlug);
-        setProject(getProject);
+        const getProjectData = getProjectBySlug(projectSlug);
+
+        // Check if getProjectData is not null before setting the state
+        if (getProjectData !== null) {
+            setProject(getProjectData);
+        }
     }, []);
 
     return (
