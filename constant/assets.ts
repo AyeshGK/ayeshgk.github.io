@@ -142,8 +142,20 @@ export const assets = {
       2: require("@images/projects/_09/2.png"),
       3: require("@images/projects/_09/3.png"),
       4: require("@images/projects/_09/4.png"),
-
     },
+
+    spring_security:{
+      1: require("@images/projects/_10/1.png"),
+    },
+
+    spring_microservices:{
+      1: require("@images/projects/_11/1.png"),
+    },
+    
+    api_monitoring:{
+      1: require("@images/projects/_12/1.png"),
+      2: require("@images/projects/_12/2.png"),
+    }
 
   }
 }

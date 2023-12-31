@@ -9,6 +9,10 @@ const categories = [
     {
         slug: 'design',
         name: 'Design',
+    },
+    {
+        slug: 'service',
+        name: 'Service',
     }
 ];
 
@@ -128,6 +132,190 @@ const initialProjects = [
         category: categories[0]
     },
     {
+        slug: 'api-gateway-monitoring-system',
+        title: 'API Gateway Monitoring System',
+        images:[
+            {
+                src: assets.projects.api_monitoring[1],
+                alt: 'API Gateway Monitoring System',
+            },
+            {
+                src: assets.projects.api_monitoring[2],
+                alt: 'API Gateway Monitoring System',
+            }
+            
+        ],
+        repositoryUrl: "https://github.com/Arc-Anoma-Intelligence",
+        demoUrl: "",
+        descriptions:[
+            {
+                description :"API Gateway performance monitoring system, integrated with anomaly detection models with comprehensive web based application to understand  valuable insights, system behaviours and potential issues.Combining tailored anomaly detection models for diverse parameter sets, implementing a cross-feature analysis to enhance accuracy."
+            },
+        ],
+        techStacks: [
+            {
+                name: 'NextJS',
+                imageUrl: 'https://img.icons8.com/?size=512&id=MWiBjkuHeMVq&format=png',
+                webUrl: 'https://nextjs.org/',
+                use: "Web Application"
+            },
+            {
+                name: 'pyQt5',
+                imageUrl: 'https://img.icons8.com/?size=512&id=13407&format=png',
+                webUrl:  'https://www.qt.io/',
+                use: "Desktop Application"
+            },
+            {
+                name: 'Tensorflow',
+                imageUrl: 'https://img.icons8.com/?size=512&id=n3QRpDA7KZ7P&format=png',
+                webUrl: 'https://www.tensorflow.org/',
+                use : "Model Building"
+            },
+            {
+                name: 'MongoDB',
+                imageUrl: 'https://img.icons8.com/?size=512&id=74402&format=png',
+                webUrl: 'https://www.mysql.com/',
+                use : "Database"
+            },
+        ],
+        contributors: [
+            {
+                name: 'Ayesh Vininda',
+                email: 'ayeshgk@gmail.com'
+            },
+            {
+                name: 'Nishanthini',
+                email: ''
+            },
+            {
+                name: 'Bimsara Bodaragama',
+                email: ''
+            },
+        ],
+        projectType: projectTypes[2],
+        category: categories[0]
+    },
+    {
+        slug: 'spring-security',
+        title: 'Spring Security',
+        images:[
+            {
+                src: assets.projects.spring_security[1],
+                alt: 'Spring Security',
+            },
+        ],
+        repositoryUrl: "https://github.com/AyeshGK/spring_security",
+        demoUrl: "",
+        descriptions:[
+            {
+                description : "Study of Spring Security spring-boot V3.0.4"
+            },
+        ],
+        techStacks: [
+            {
+                name: 'Postgres',
+                imageUrl: 'https://img.icons8.com/?size=512&id=38561&format=png',
+                webUrl: 'https://reactjs.org/',
+                use: "Database"
+                
+            },
+            {
+                name: 'JPA',
+                imageUrl: 'https://img.icons8.com/?size=512&id=7qNIPfDbudRB&format=png',
+                webUrl: 'https://nodejs.org/en/',
+                use: "ORM"
+            },
+            {
+                name:'Java',
+                imageUrl:'https://img.icons8.com/?size=512&id=13679&format=png',
+                webUrl:'https://www.python.org/',
+                use: "Programming Language"
+            },
+            {
+                name:'Spring Boot',
+                imageUrl: 'https://img.icons8.com/?size=512&id=90519&format=png',
+                webUrl:'https://www.mongodb.com/',
+                use: "Framework"
+            }
+        ],
+        contributors: [
+            {
+                name: 'Ayesh Vininda',
+                email: 'ayeshgk@gmail.com'
+            },
+        ],
+        projectType: projectTypes[0],
+        category: categories[2]
+    },
+    {
+        slug: 'spring-microservices',
+        title: 'Spring Microservices',
+        images:[
+            {
+                src: assets.projects.spring_microservices[1],
+                alt: 'Spring Microservices',
+            },
+        ],
+        repositoryUrl: "https://github.com/AyeshGK/spring_microservices",
+        demoUrl: "",
+        descriptions:[
+            {
+                description : "Case study of Spring Cloud Microservices spring-boot"
+            },
+            {
+                topic: "Specifications",
+                description: "Spring Cloud Config Server, Spring Cloud Eureka Server, Spring Cloud Gateway, Spring Cloud Zipkin, Spring Cloud OpenFeign, AMQP",
+            }
+        ],
+        techStacks: [
+            {
+                name: 'Postgres',
+                imageUrl: 'https://img.icons8.com/?size=512&id=38561&format=png',
+                webUrl: 'https://reactjs.org/',
+                use: "Database"
+            },
+            {
+                name: 'JPA',
+                imageUrl: 'https://img.icons8.com/?size=512&id=7qNIPfDbudRB&format=png',
+                webUrl: 'https://nodejs.org/en/',
+                use: "ORM"
+            },
+            {
+                name:'Java',
+                imageUrl:'https://img.icons8.com/?size=512&id=13679&format=png',
+                webUrl:'https://www.python.org/',
+                use: "Programming Language"
+            },
+            {
+                name:'Spring Boot',
+                imageUrl: 'https://img.icons8.com/?size=512&id=90519&format=png',
+                webUrl:'https://www.mongodb.com/',
+                use: "Framework"
+            },
+            {
+                name: "Spring Cloud",
+                imageUrl: "https://img.icons8.com/?size=512&id=2oBx9FpXcbLa&format=png",
+                webUrl: "https://spring.io/projects/spring-cloud",
+                use: "Microservices",
+            },
+            {
+                name:'RabbitMQ',
+                imageUrl: 'https://img.icons8.com/?size=512&id=3X5J8dZc7jg2&format=png',
+                webUrl:'https://www.mongodb.com/',
+                use: "Message Broker"
+            },
+            
+        ],
+        contributors: [
+            {
+                name: 'Ayesh Vininda',
+                email: 'ayeshgk@gmail.com'
+            },
+        ],
+        projectType: projectTypes[5],
+        category: categories[2]
+    },
+    {
         slug: 'parkinson-disease-detection-system',
         title: 'Parkinson Disease Detection System',
         images:[
@@ -144,7 +332,7 @@ const initialProjects = [
                 alt: 'Parkinson Disease Detection System',
             }
         ],
-        repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
+        repositoryUrl: "https://github.com/team-hexagon-6",
         demoUrl: "",
         descriptions:[
             {
@@ -175,10 +363,16 @@ const initialProjects = [
                 use: "Machine Learning"
             },
             {
-                name:'MongoDB',
-                imageUrl: 'https://img.icons8.com/?size=512&id=74402&format=png',
-                webUrl:'https://www.mongodb.com/',
-                use: "Database"
+                name: 'MySQL',
+                imageUrl: 'https://img.icons8.com/?size=512&id=UFXRpPFebwa2&format=png',
+                webUrl: 'https://www.mysql.com/',
+                use : "Database"
+            },
+            {
+                name: 'Prisma',
+                imageUrl: "https://img.icons8.com/?size=512&id=YKKmRFS8Utmm&format=png",
+                webUrl: "https://www.prisma.io/",
+                use: "ORM"
             }
         ],
         contributors: [
@@ -227,7 +421,7 @@ const initialProjects = [
                 alt: 'Customer Churn Dashboard',
             },
         ],
-        repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
+        repositoryUrl: "https://github.com/ayeshgk-machine-learning/data-science-project",
         demoUrl: "",
         descriptions:[
             {
@@ -316,7 +510,7 @@ const initialProjects = [
                 alt: 'Bank Transactions and Loan Processing System',
             },
         ],
-        repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
+        repositoryUrl: "https://github.com/section117/bank-system-sem-4",
         demoUrl: "",
         descriptions:[
             {
@@ -415,7 +609,7 @@ const initialProjects = [
                 email:''
             }
         ],
-        repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
+        repositoryUrl: "https://github.com/AyeshGK/clinical_trial_mangement_system_test",
         demoUrl: "",
         descriptions:[
             {
@@ -456,8 +650,9 @@ const initialProjects = [
             {
                 src: assets.projects.rental[1],
                 alt: 'Web application for vehicle rentle service',
-            }],
-        repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
+            }
+        ],
+        repositoryUrl: "https://github.com/Cyber-Synced",
         demoUrl: "",
         descriptions:[
             {
@@ -520,7 +715,7 @@ const initialProjects = [
                 alt: 'Audirea - Music generator',
             }
         ],
-        repositoryUrl: "https://github.com/ayesh-vininda/portfolio",
+        repositoryUrl: "https://github.com/Audirea/music-generator",
         demoUrl: "",
         descriptions:[
             {
@@ -542,7 +737,7 @@ const initialProjects = [
                 name: 'Tensorflow',
                 imageUrl: 'https://img.icons8.com/?size=512&id=n3QRpDA7KZ7P&format=png',
                 webUrl: 'https://www.tensorflow.org/',
-                use : "Deep Learning"
+                use : "Model Building"
             },
         ],
         projectType: projectTypes[5],
