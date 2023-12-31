@@ -79,7 +79,7 @@ export default function ProjectInfo ({project}:{project:Project}) {
                             Project Contributors
                         </h3>
                         <ul className='list-disc pl-6'>
-                            {contributors.map((contributor, index) => (
+                            {contributors?.map((contributor, index) => (
                             <li key={index} className='flex items-center gap-2'>
                                 <BsPerson className='text-xl' />
                                 <span className='text-sm font-bold font-montserrat'>{contributor.name}</span>
