@@ -1,7 +1,7 @@
 export interface Project {
     slug: string;
     title: string;
-    images?: { src: any; alt: string }[]; 
+    images: { src: any; alt: string }[]; 
     repositoryUrl: string;
     demoUrl: string;
     descriptions: ({ description: string; topic?: undefined } | { topic: string; description: string })[];
