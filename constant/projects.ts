@@ -159,25 +159,29 @@ const initialProjects = [
             {
                 name: 'React JS',
                 imageUrl: 'https://img.icons8.com/?size=512&id=123603&format=png',
-                webUrl: 'https://reactjs.org/'
+                webUrl: 'https://reactjs.org/',
+                use: "Frontend"
             },
             {
                 name: 'Node JS',
                 imageUrl: 'https://img.icons8.com/?size=512&id=hsPbhkOH4FMe&format=png',
-                webUrl: 'https://nodejs.org/en/'
+                webUrl: 'https://nodejs.org/en/',
+                use: "Backend"
             },
             {
                 name:'Python',
                 imageUrl:'https://img.icons8.com/?size=512&id=l75OEUJkPAk4&format=png',
-                webUrl:'https://www.python.org/'
+                webUrl:'https://www.python.org/',
+                use: "Machine Learning"
             },
             {
                 name:'MongoDB',
                 imageUrl: 'https://img.icons8.com/?size=512&id=74402&format=png',
-                webUrl:'https://www.mongodb.com/'
+                webUrl:'https://www.mongodb.com/',
+                use: "Database"
             }
         ],
-        constributors: [
+        contributors: [
             {
                 name: 'Ayesh Vininda',
                 email: 'ayeshgk@gmail.com'
@@ -258,6 +262,7 @@ const initialProjects = [
                 name:'Flask',
                 imageUrl:'https://img.icons8.com/?size=512&id=MHcMYTljfKOr&format=png',
                 webUrl:'https://flask.palletsprojects.com/en/2.0.x/',
+                use : "Backend"
                 
             }
         ],
@@ -459,26 +464,48 @@ const initialProjects = [
                 description:"Contributed to the development of web application for a vehicle rental service, with frontend responsibilities using React."
             }
         ],
+        contributors: [
+            {
+                name : 'Ayesh Vininda',
+                email: 'ayeshgk@gmail.com'
+            },
+            {
+                name : 'Prasad Darshana',
+                email: ''
+            },
+            {
+                name : 'Dasun Nimantha',
+                email: ''
+            },
+            {
+                name : 'Dinuka Nimantha',
+                email: ''
+            },
+        ],
         techStacks: [
             {
                 name: 'Tailwind CSS',
                 imageUrl: 'https://img.icons8.com/?size=512&id=4PiNHtUJVbLs&format=png',
-                webUrl: 'https://tailwindcss.com/'
+                webUrl: 'https://tailwindcss.com/',
+                use : "Styling"
             },
             {
                 name: 'React JS',
                 imageUrl: 'https://img.icons8.com/?size=512&id=123603&format=png',
-                webUrl: 'https://reactjs.org/'
+                webUrl: 'https://reactjs.org/',
+                use : "Frontend"
             },
             {
                 name: 'Redux JS',
                 imageUrl: 'https://img.icons8.com/?size=512&id=jD-fJzVguBmw&format=png',
-                webUrl: 'https://redux.js.org/'
+                webUrl: 'https://redux.js.org/',
+                use : "State Management"
             },
             {
                 name: 'Spring Boot',
                 imageUrl: 'https://img.icons8.com/?size=512&id=90519&format=png',
-                webUrl: 'https://spring.io/projects/spring-boot'
+                webUrl: 'https://spring.io/projects/spring-boot',
+                use : "Backend"
             },
         ],
         projectType: projectTypes[4],
@@ -508,12 +535,14 @@ const initialProjects = [
             {
                 name:'Python',
                 imageUrl:'https://img.icons8.com/?size=512&id=l75OEUJkPAk4&format=png',
-                webUrl:'https://www.python.org/'
+                webUrl:'https://www.python.org/',
+                use: "Programming Language"
             },
             {
                 name: 'Tensorflow',
                 imageUrl: 'https://img.icons8.com/?size=512&id=n3QRpDA7KZ7P&format=png',
-                webUrl: 'https://www.tensorflow.org/'
+                webUrl: 'https://www.tensorflow.org/',
+                use : "Deep Learning"
             },
         ],
         projectType: projectTypes[5],
