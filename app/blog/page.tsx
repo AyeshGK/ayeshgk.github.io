@@ -36,6 +36,27 @@ const blogTypes = [
 
 const initialBlogs = [
     {
+        slug: 'a-guide-to-essential-design-patterns-for-microservices',
+        title: 'Design Patterns for Microservices',
+        image: assets.home.blogs.blog6,
+        repositoryUrl: "",
+        link: "https://medium.com/@ayeshgk/a-guide-to-essential-design-patterns-for-microservices-5b28020640d9",
+        summary: "Microservices architectures involve a collection of services working together to achieve business goals. Design patterns in microservices offer standardized solutions, ensuring uniformity, scalability, and maintainability in distributed systems.",
+        keywords: [
+            {
+                name: 'Microservices',
+            },
+            {
+                name:'Design Patterns',
+            },
+            {
+                name:'System Design',
+            },
+        ],
+        blogType: blogTypes[0],
+        category: categories[0]
+    },
+    {
         slug: 'finetuining',
         title: 'Finetuning 🧐',
         image: assets.home.blogs.blog5,
