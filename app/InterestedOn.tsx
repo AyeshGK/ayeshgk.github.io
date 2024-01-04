@@ -30,7 +30,7 @@ const interestSet = [
         officialSite: 'https://www.prisma.io/',
     },
     {
-        name: "Web Developement",
+        name: "Web Development",
         image: assets.home.interests.wd,
         officialSite: 'https://expressjs.com/',
     },
