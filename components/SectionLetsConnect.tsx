@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { assets } from "@/constant/assets";
-import styles from "./home.module.css";
+import styles from "@/assets/css/home.module.css";
 
 const AnimatedImage = motion(Image);
 
@@ -103,7 +103,7 @@ export default function SectionLetsConnect() {
   return (
     <section
       ref={ref}
-      className={`safe-x-padding ${styles.sectionDistance} overflow-y-hidden lg:h-[1000px]`}
+      className={`safe-x-padding mb-[50px] overflow-y-hidden lg:h-[1000px]`}
       aria-label="Let&apos;s Connect Section"
     >
       <div className="text-center">

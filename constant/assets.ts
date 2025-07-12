@@ -1,7 +1,7 @@
 export const assets = {
   home: {
     hero: {
-      avatarSmile: require("@images/home/hero/1702365021591.jpg"),
+      avatarSmile: require("@images/home/hero/profile-main-avatar.jpg"),
       dribble: require("@images/home/hero/dribble.webp"),
       github: require("@images/home/hero/github.webp"),
       instagram: require("@images/home/hero/instagram.webp"),
@@ -76,6 +76,10 @@ export const assets = {
       blog4: require("@images/blogs/_04/1.png"),
       blog5: require("@images/blogs/_05/1.png"),
       blog6: require("@images/blogs/_06/1.png"),
+      blog7: require("@images/blogs/_07/1.png"),
+      blog8: require("@images/blogs/_08/1.png"),
+      blog9: require("@images/blogs/_09/1.png"),
+      blog10: require("@images/blogs/_10/1.png"),
     },
   },
   projects:{

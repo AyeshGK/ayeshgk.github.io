@@ -1,22 +1,20 @@
-import { Inter } from "next/font/google";
-import Footer from "../components/Footer";
-import SectionHero from "./SectionHero";
-import SectionLetsConnect from "./SectionLetsConnect";
-import SectionMyLatestProject from "./SectionMyLatestProject";
-import SectionQuote from "./SectionQuote";
-import SectionTechnologyStack from "./SectionTechnologyStack";
-import InterestedOn from "./InterestedOn";
+import Footer from "@/components/Footer";
+import InterestedOn from "@/components/InterestedOn";
+import SectionHero from "@/components/SectionHero";
+import SectionLetsConnect from "@/components/SectionLetsConnect";
+import SectionQuote from "@/components/SectionQuote";
+import TimelineComponent from "@/components/TimelineComponent";
+
 
 export default function Home() {
   return (
-    <div className="safe-layout">
+    <main className="safe-layout" role="main">
       <SectionHero />
-      <SectionTechnologyStack />
+      <TimelineComponent />
       <InterestedOn />
-      {/* <SectionMyLatestProject /> */}
       <SectionLetsConnect />
       <SectionQuote />
       <Footer />
-    </div>
+    </main>
   )
 }

@@ -89,3 +89,7 @@
   stroke-dashoffset: -32.42;
 }
 /* End of Mobile & Tablet Hamburger */
+
+.timeline-date-text-color  {
+  color: #000 !important;
+}

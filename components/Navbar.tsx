@@ -1,12 +1,11 @@
 "use client";
 
-import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
-import BrandIcon from './BrandIcon';
-import { usePathname } from 'next/navigation';
-import Banner from './Banner';
-import { RxCaretRight } from 'react-icons/rx';
-import { BsFileEarmarkPerson } from 'react-icons/bs';
+import Link from "next/link";
+import React, { useEffect, useState, useRef } from "react";
+import BrandIcon from "./BrandIcon";
+import { usePathname } from "next/navigation";
+import { RxCaretRight } from "react-icons/rx";
+import { BsFileEarmarkPerson } from "react-icons/bs";
 
 const navlinks = [
     {
@@ -14,19 +13,23 @@ const navlinks = [
         href: "/",
     },
     {
-        name: "Project",
-        href: "/project",
+        name: "Projects",
+        href: "/projects",
     },
     {
-        name: "Blog",
-        href: "/blog",
+        name: "Blogs",
+        href: "/blogs",
+    },
+    {
+        name: "Publications",
+        href: "/publications",
     },
 ];
 
 export default function Navbar(): JSX.Element {
-    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
-    const triggerMenuRef = React.useRef<HTMLInputElement>(null);
-    const navbarRef = React.useRef<HTMLDivElement>(null);
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+    const navbarRef = useRef<HTMLDivElement>(null);
+    const [navbarHeight, setNavbarHeight] = useState<number>(90);
 
     const pathname = usePathname();
 
@@ -38,6 +41,7 @@ export default function Navbar(): JSX.Element {
         setIsMenuOpen(false);
     };
 
+    // Close menu on window resize >= md breakpoint
     useEffect(() => {
         const closeMenuOnResize = (): void => {
             if (window.innerWidth >= 768) {
@@ -48,27 +52,8 @@ export default function Navbar(): JSX.Element {
         return () => window.removeEventListener("resize", closeMenuOnResize);
     }, []);
 
-    const handleDownload = () => {
-        // Replace 'path/to/your/resume.pdf' with the actual path to your resume file
-        const resumeFilePath = './assets/cv/Ayesh_Vininda_CV.pdf';
-        
-        const link = document.createElement('a');
-        link.href = resumeFilePath;
-        link.download = 'your_resume_file_name.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      };
-
+    // Disable body scroll when menu is open
     useEffect(() => {
-        if (triggerMenuRef.current) {
-            if (isMenuOpen) {
-                triggerMenuRef.current.checked = true;
-            } else {
-                triggerMenuRef.current.checked = false;
-            }
-        }
-
         if (isMenuOpen) {
             document.body.style.overflow = "hidden";
         } else {
@@ -76,68 +61,98 @@ export default function Navbar(): JSX.Element {
         }
     }, [isMenuOpen]);
 
+    // Measure navbar height once on mount to set mobile menu padding
+    useEffect(() => {
+        if (navbarRef.current) {
+            setNavbarHeight(navbarRef.current.offsetHeight);
+        }
+    }, []);
+
     return (
         <>
-            <nav ref={navbarRef} className={`sticky top-0 z-50 w-screen bg-white md:relative safe-layout`}>
-                {/* <Banner /> */}
-                <div className='flex flex-row items-center justify-between py-6 border-b-2 border-b-gray safe-x-padding'>
-                    <Link className='z-50' href="/" onClick={closeMenu} prefetch={false}>
+            <nav
+                ref={navbarRef}
+                className="sticky top-0 z-50 w-screen bg-white md:relative safe-layout border-b border-gray-300 dark:border-gray-700"
+            >
+                <div className="flex flex-row items-center justify-between py-6 border-b-2 border-b-gray safe-x-padding">
+                    <Link href="/" onClick={closeMenu} prefetch={false} className="z-50">
                         <div className="w-[32px] h-[40px] lg:w-[42px] lg:h-[50px]">
                             <BrandIcon />
                         </div>
                     </Link>
-                    {/* desktop menu */}
-                    <div className='flex-row items-center justify-between hidden text-lg font-bold md:flex md:gap-6 lg:gap-8'>
-                        <ul className='flex flex-row md:gap-6 lg:gap-8 justify-evenly'>
+
+                    {/* Desktop menu */}
+                    <div className="hidden md:flex md:gap-6 lg:gap-8 items-center text-lg font-bold">
+                        <ul className="flex md:gap-6 lg:gap-8 justify-evenly">
                             {navlinks.map((link, index) => (
                                 <li key={index}>
                                     <Link
-                                        className={`${pathname === link.href ? 'text-accent' : 'text-accent2'
-                                            } p-4`}
                                         href={link.href}
+                                        className={`p-4 ${pathname === link.href ? "text-accent" : "text-accent2"
+                                            }`}
                                     >
                                         {link.name}
                                     </Link>
                                 </li>
                             ))}
-
                         </ul>
-                        <a 
-                            className='px-6 py-2 text-white gradient-btn rounded-xl'
-                            href="/resume.pdf" 
-                            download="Ayesh Vininda - Resume 2024.pdf">
-                                Resume
+                        <a
+                            href="/resume.pdf"
+                            download="Ayesh Vininda - Resume 2024.pdf"
+                            className="px-6 py-2 text-white gradient-btn rounded-xl"
+                        >
+                            Resume
                         </a>
                     </div>
-                    {/* mobile hamburger menu */}
+
+                    {/* Mobile hamburger button */}
                     <div className="z-50 md:hidden">
-                        <label className="cursor-pointer hamburger">
-                            <input className='hidden' type="checkbox" ref={triggerMenuRef} onClick={toggleMenu} />
-                            <svg viewBox="0 0 32 32" id='hamburger'>
-                                <path className="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                        <button
+                            aria-label="Toggle menu"
+                            aria-expanded={isMenuOpen}
+                            aria-controls="mobile-menu"
+                            onClick={toggleMenu}
+                            className="cursor-pointer hamburger"
+                        >
+                            <svg viewBox="0 0 32 32" id="hamburger">
+                                <path
+                                    className="line line-top-bottom"
+                                    d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+                                ></path>
                                 <path className="line" d="M7 16 27 16"></path>
                             </svg>
-                        </label>
+                        </button>
                     </div>
                 </div>
             </nav>
-            {/* mobile menu */}
+
+            {/* Mobile menu */}
             <div
-                className={`${isMenuOpen ? "top-0" : "-translate-y-full"} fixed top-0 w-screen h-screen transition-all duration-500 ease-in-out z-40 bg-white`}
-                style={{ paddingTop: navbarRef.current ? `${navbarRef.current.offsetHeight}px` : '90px' }}
+                id="mobile-menu"
+                className={`fixed top-0 w-screen h-screen transition-all duration-500 ease-in-out z-40 bg-white ${isMenuOpen ? "top-0" : "-translate-y-full"
+                    }`}
+                style={{ paddingTop: `${navbarHeight}px` }}
             >
-                <div className='flex flex-col items-start justify-between p-4 text-lg font-medium lg:hidden lg:gap-8'>
-                    <ul className='w-full'>
+                <div className="flex flex-col items-start justify-between p-4 text-lg font-medium lg:hidden lg:gap-8">
+                    <ul className="w-full">
                         {navlinks.map((link, index) => (
-                            <li key={index} className={`flex mb-2 rounded-lg`}>
+                            <li key={index} className="flex mb-2 rounded-lg">
                                 <Link
-                                    className={`flex-1 py-4 safe-x-padding`}
                                     href={link.href}
                                     onClick={closeMenu}
+                                    className="flex-1 py-4 safe-x-padding"
                                 >
                                     <div className="flex items-center justify-between">
-                                        <span className={`${pathname === link.href ? 'gradient-text' : 'text-accent'} text-2xl font-semibold`}>{link.name}</span>
-                                        <span className={`${pathname === link.href ? 'text-secondary' : ''} text-4xl`}>
+                                        <span
+                                            className={`text-2xl font-semibold ${pathname === link.href ? "gradient-text" : "text-accent"
+                                                }`}
+                                        >
+                                            {link.name}
+                                        </span>
+                                        <span
+                                            className={`text-4xl ${pathname === link.href ? "text-secondary" : ""
+                                                }`}
+                                        >
                                             <RxCaretRight />
                                         </span>
                                     </div>
@@ -146,21 +161,14 @@ export default function Navbar(): JSX.Element {
                         ))}
                         <li className="flex text-white rounded-lg gradient-bg">
                             <a
+                                href="/resume.pdf"
+                                download="Ayesh Vininda - Resume 2024.pdf"
                                 className="flex-1 py-4 safe-x-padding"
-                                href="/resume.pdf" 
-                                download="Ayesh Vininda - Resume 2024.pdf">
-                                Resume
+                            >
                                 <div className="flex items-center justify-between">
-                                    <span className='text-2xl font-semibold'>Resume</span>
-                                    <span className='text-4xl'>
-                                    {/* <button onClick={handleDownload} style={{ cursor: 'pointer' }}/> */}
-       
+                                    <span className="text-2xl font-semibold">Resume</span>
+                                    <span className="text-4xl">
                                         <BsFileEarmarkPerson />
-                                        {/* <BsFileEarmarkPerson 
-                                            onClick={handleDownload} 
-                                            style={{ cursor: 'pointer' }} 
-                                        /> */}
-                                        {/* <a href="/cv/Ayesh_Vininda_CV.pdf" class="button" download>Resume</a> */}
                                     </span>
                                 </div>
                             </a>
