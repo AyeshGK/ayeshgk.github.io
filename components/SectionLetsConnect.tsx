@@ -121,7 +121,7 @@ export default function SectionLetsConnect() {
           transition={{ duration: 0.7 }}
           className={`${styles.sectionDescription} max-w-[730px] mx-auto`}
         >
-          So come along and join me on my journey of discovery and exploration. Let&apos;s build some amazing things together! 🌱👨‍💻💫
+          So come along and join me on my journey of discovery and exploration. Let&apos;s build some amazing things together!
         </motion.p>
       </div>
       <div className="h-full mt-4">

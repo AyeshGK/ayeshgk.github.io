@@ -35,9 +35,9 @@ export default function SectionHero(): JSX.Element {
           </motion.h2>
           <motion.p
             className="text-base font-medium text-center md:text-xl lg:text-2xl text-accent xl:text-left"
-            aria-label="Software Engineer at KAST. Former Software Engineer at MIT ESP. UOM CSE graduate. Passionate about AI/ML, Web Development, Cloud Computing, Blockchain, and Cryptocurrency."
+            aria-label="Software Engineer. Former Software Engineer at MIT ESP. UOM CSE graduate. Passionate about AI/ML, Web Development, Cloud Computing, Blockchain, and Cryptocurrency."
           >
-            Software Engineer @ KAST | ex-SE @ MIT ESP | UOM CSE | AI/ML & Web Dev Enthusiast | Cloud, Blockchain & Crypto Explorer
+            Software Engineer | ex-SE @ MIT ESP | UOM CSE | AI/ML & Web Dev Enthusiast | Cloud, Blockchain & Crypto Explorer
           </motion.p>
         </div>
         {/* second */}
