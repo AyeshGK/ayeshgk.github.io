@@ -10,7 +10,7 @@ export const timelineEvents = [
     date: 'Jun 2025 - Present',
     title: 'Software Engineer',
     subtitle: 'Undisclosed Company · Singapore . Remote',
-    description: 'Engineering, Software Infrastructure, Crypto, Web3',
+    description: 'Engineering, Software Infrastructure, Cryptocurrency, Web3',
     icon: MdEngineering,
     color: '#9b97ff',
   },
